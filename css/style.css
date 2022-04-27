@@ -5,8 +5,10 @@
 }
 
 :root {
+    --top-bar-height: 50px;
     --bottom-bar-height: 100px;
-    --main-col-gap: 3px;
+    --main-col-gap: 5px;
+    --user-name-font-size: 0.8rem;
 }
 
 body {
@@ -14,9 +16,14 @@ body {
     color: white;
 }
 
+.top-bar-container {
+    height: var(--top-bar-height);
+    background-color: black;
+}
+
 .main-container {
     background-color: black;
-    height: calc(100vh - var(--bottom-bar-height));
+    height: calc(100vh - var(--bottom-bar-height) - var(--top-bar-height));
     padding: 3rem 2rem 1rem 2rem;
     overflow: auto;
 }
@@ -42,7 +49,30 @@ body {
     flex-basis: calc(100% / 7 - var(--main-col-gap));
 }
 
+.main-avatar-gap > .col-7 {
+    margin-bottom: 10px;
+}
+
+.avatar-container {
+    position: relative;
+}
+
 .avatar-container .avatar {
     width: 100%;
     object-fit: cover;
 }
+
+.avatar-container .user-name-container {
+    display: none;
+    background-color: rgba(5, 5, 5, 0.506);
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    font-size: var(--user-name-font-size);
+    padding: 0.2rem 0.3rem;
+}
+
+.avatar-container:hover .user-name-container{
+    display: inline-block;
+}
+
