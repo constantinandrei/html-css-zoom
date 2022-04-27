@@ -9,6 +9,7 @@
     --bottom-bar-height: 100px;
     --main-col-gap: 5px;
     --user-name-font-size: 0.8rem;
+    --bottom-bar-icon-size: 1.6rem;
 }
 
 body {
@@ -45,13 +46,16 @@ body {
     overflow: auto;
 }
 
-.bottom-bar-container {
-    height: var(--bottom-bar-height);
-    background-color: #222222;
-}
-
 .flex {
     display: flex;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.space-between {
+    justify-content: space-between;
 }
 
 .wrap-on {
@@ -93,3 +97,68 @@ body {
     display: inline-block;
 }
 
+.bottom-bar-container {
+    height: var(--bottom-bar-height);
+    background-color: #222222;
+}
+
+.col-sides {
+    flex-basis: calc(100% / 6);
+}
+
+.height-100 {
+    height: 100%;
+}
+
+.col-central {
+    flex-basis: calc(100% / 3);
+    flex-grow: 1;
+}
+
+.button-container {
+    cursor: pointer;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.button-container.more-left-space {
+    margin-left: 1rem;
+}
+
+.button-container.text-align-left {
+    text-align: left;
+}
+
+.button-container .icon-container {
+    font-size: var(--bottom-bar-icon-size);
+}
+
+.button-container .icon-name {
+    font-size: 0.8rem;
+}
+
+.arrow-icon-container {
+    cursor: pointer;
+    font-size: calc(var(--bottom-bar-icon-size) * 0.5);
+}
+
+.icon-container.green-color {
+    color: rgb(67, 165, 67);
+}
+
+.icon-container {
+    padding-bottom: 0.5rem;
+}
+
+.end-button {
+    background-color: #4A4A4A;
+    color: red;
+    text-align: right;
+    display: inline-block;
+    height: var(--bottom-bar-height)
+}
+
+.bottom-right {
+    display: flex;
+    flex-direction: row-reverse;
+}
