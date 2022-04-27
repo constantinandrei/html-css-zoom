@@ -19,12 +19,29 @@ body {
 .top-bar-container {
     height: var(--top-bar-height);
     background-color: black;
+    position: relative;
+}
+
+.top-bar-container .top-right {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translate(0, -50%);
+}
+
+.top-bar-container .top-right span {
+    background-color: rgba(128, 118, 118, 0.506);
+    padding: 5px;
+    margin-right: 4px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    border-radius: 5px;
 }
 
 .main-container {
     background-color: black;
     height: calc(100vh - var(--bottom-bar-height) - var(--top-bar-height));
-    padding: 3rem 2rem 1rem 2rem;
+    padding: 1rem 2rem;
     overflow: auto;
 }
 
