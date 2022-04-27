@@ -155,10 +155,17 @@ body {
     color: red;
     text-align: right;
     display: inline-block;
-    height: var(--bottom-bar-height)
+    height: var(--bottom-bar-height);
+    padding: 0 1rem;
+    font-size: 0.8rem;
 }
 
 .bottom-right {
     display: flex;
     flex-direction: row-reverse;
+    line-height: var(--bottom-bar-height);
+}
+
+.bottom-right .button-container {
+    padding: 0;
 }
